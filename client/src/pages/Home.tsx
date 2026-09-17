@@ -130,14 +130,8 @@ function Hero() {
       <div className="pointer-events-none absolute left-1/2 top-[-20%] h-[640px] w-[900px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(122,162,255,0.16),transparent)]" />
 
       <motion.div variants={container} initial="hidden" animate="show" className="shell relative text-center">
-        <motion.div variants={item} className="flex justify-center">
-          <span className="chip !py-1.5 !pe-3.5 !ps-2.5">
-            <span className="pulse-dot h-2 w-2 rounded-full bg-emerald-400 text-emerald-400" />
-            {c.hero.status}
-          </span>
-        </motion.div>
 
-        <motion.p variants={item} className="eyebrow mt-8">
+        <motion.p variants={item} className="eyebrow">
           {c.hero.name}
         </motion.p>
 
@@ -360,60 +354,6 @@ function About() {
   );
 }
 
-/* ---------------- Gallery ---------------- */
-
-const GALLERY = [
-  "/images/athar/screen-prayer.webp",
-  "/images/wize/screen-wize-ai.webp",
-  "/images/athar/screen-salah.webp",
-  "/images/wize/screen-receipts.webp",
-  "/images/athar/screen-hadith.webp",
-  "/images/wize/screen-plans.webp",
-  "/images/athar/screen-scan.webp",
-  "/images/wize/screen-academy.webp",
-  "/images/wize/screen-transactions.webp",
-];
-const GALLERY_FLAT = [
-  "/images/najem/parent-home.webp",
-  "/images/najem/kid-store.webp",
-  "/images/najem/child-progress.webp",
-  "/images/najem/kid-home.webp",
-];
-
-function Gallery() {
-  const { c } = useLanguage();
-  const row = [...GALLERY, ...GALLERY];
-  const row2 = [...GALLERY_FLAT, "/images/yss/portal-today.webp", "/images/yss/portal-reports.webp"];
-  const row2x = [...row2, ...row2];
-  return (
-    <section className="py-24 sm:py-32">
-      <div className="shell">
-        <SectionHead eyebrow={c.gallery.eyebrow} title={c.gallery.title} />
-      </div>
-      <div className="marquee-wrap relative mt-14 overflow-hidden" dir="ltr">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#07080b] to-transparent sm:w-40" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#07080b] to-transparent sm:w-40" />
-        <div className="marquee gap-5 pe-5" style={{ animationDuration: "70s" }}>
-          {row.map((src, i) => (
-            <img key={i} src={src} alt="" loading="lazy" className="h-[340px] w-auto shrink-0 rounded-[1.4rem] border border-white/10 sm:h-[460px]" />
-          ))}
-        </div>
-        <div className="marquee mt-5 gap-5 pe-5" style={{ animationDuration: "60s", animationDirection: "reverse" }}>
-          {row2x.map((src, i) =>
-            src.includes("/yss/") ? (
-              <img key={i} src={src} alt="" loading="lazy" className="h-[220px] w-auto shrink-0 rounded-[1.2rem] border border-white/10 sm:h-[300px]" />
-            ) : (
-              <div key={i} className="h-[220px] shrink-0 overflow-hidden rounded-[1.2rem] border border-white/10 bg-[#0b0b0d] sm:h-[300px]">
-                <img src={src} alt="" loading="lazy" className="h-full w-auto object-cover object-top" />
-              </div>
-            )
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------------- Pillars (Startups / AI / Security) ---------------- */
 
 const PILLAR_STYLE: Record<string, { icon: typeof Rocket; color: string }> = {
@@ -462,24 +402,6 @@ function Pillars() {
         })}
       </div>
 
-      <Reveal delay={0.1}>
-        <div className="card relative mt-6 grid grid-cols-2 overflow-hidden md:grid-cols-4">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_120%_at_50%_120%,rgba(167,139,250,0.14),transparent)]" />
-          {c.aiStats.map((s, i) => (
-            <div
-              key={s.l}
-              className={`relative px-5 py-7 text-center sm:py-9 ${i % 2 === 1 ? "border-s border-white/[0.06]" : ""} ${i === 2 ? "md:border-s md:border-white/[0.06]" : ""} ${
-                i >= 2 ? "border-t border-white/[0.06] md:border-t-0" : ""
-              }`}
-            >
-              <div className="text-xl font-semibold tracking-tight text-white sm:text-3xl" dir={isArabic && /[A-Za-z0-9]/.test(s.v) && !/[؀-ۿ]/.test(s.v) ? "ltr" : undefined}>
-                {s.v}
-              </div>
-              <div className="mt-1.5 text-xs text-[var(--dim)] sm:text-sm">{s.l}</div>
-            </div>
-          ))}
-        </div>
-      </Reveal>
     </section>
   );
 }
@@ -546,7 +468,7 @@ function FeaturedProject({ p, index }: { p: Project; index: number }) {
   const flip = index % 2 === 1;
 
   const body = (
-    <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+    <div className="flex flex-col justify-center p-7 sm:p-9">
       <div className="flex items-center gap-3">
         <ProjectIcon p={p} />
         <div>
@@ -555,7 +477,7 @@ function FeaturedProject({ p, index }: { p: Project; index: number }) {
         </div>
       </div>
 
-      <h3 className="display mt-7 text-[1.75rem] leading-[1.1] sm:text-4xl">{p.title}</h3>
+      <h3 className="display mt-6 text-[1.6rem] leading-[1.12] sm:text-[2rem]">{p.title}</h3>
       <p className="mt-4 text-[15px] leading-relaxed text-[var(--dim)]">{p.desc}</p>
 
       <div className="mt-6 flex flex-wrap gap-2">
@@ -589,7 +511,7 @@ function FeaturedProject({ p, index }: { p: Project; index: number }) {
   );
 
   const visual = (
-    <div className="relative min-h-[320px] border-b border-white/[0.06] sm:min-h-[440px] lg:min-h-[560px] lg:border-b-0">
+    <div className="relative min-h-[320px] border-b border-white/[0.06] sm:min-h-[380px] lg:min-h-[460px] lg:border-b-0">
       <ProjectVisual p={p} />
     </div>
   );
@@ -647,7 +569,7 @@ function Work() {
   return (
     <section className="shell py-24 sm:py-32">
       <SectionHead id="work" eyebrow={c.work.eyebrow} title={c.work.title} />
-      <div className="mt-14 space-y-6 sm:mt-20 sm:space-y-8">
+      <div className="mt-12 space-y-5 sm:mt-14 sm:space-y-6">
         {c.projects.map((p, i) => (
           <FeaturedProject key={p.id} p={p} index={i} />
         ))}
@@ -847,7 +769,6 @@ export default function Home() {
         <Hero />
         <About />
         <Work />
-        <Gallery />
         <Pillars />
         <StackMarquee />
         <Experience />
