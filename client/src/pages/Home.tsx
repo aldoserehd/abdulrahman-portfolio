@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowUpRight, ArrowDown, Check, Copy, Github, Linkedin, Mail, Menu, Rocket, ShieldCheck, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, ArrowDown, Check, Copy, Github, Instagram, Linkedin, Mail, Menu, Rocket, ShieldCheck, Sparkles, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { links, type Project } from "@/content";
 
@@ -346,6 +346,9 @@ function About() {
               <a href={links.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                 <Linkedin size={16} /> LinkedIn
               </a>
+              <a href={links.tickholic} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                <Instagram size={16} /> Tickholic
+              </a>
             </div>
           </Reveal>
         </div>
@@ -392,7 +395,13 @@ function Pillars() {
                   {it.points.map((pt) => (
                     <li key={pt} className="flex gap-2.5 text-sm text-[#c4c7cf]">
                       <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full" style={{ background: st.color }} />
-                      <span dir="auto">{pt}</span>
+                      {pt.startsWith("Tickholic") ? (
+                        <a href={links.tickholic} target="_blank" rel="noopener noreferrer" dir="auto" className="inline-flex items-center gap-1.5 border-b border-white/20 transition hover:border-white hover:text-white">
+                          {pt} <Instagram size={13} />
+                        </a>
+                      ) : (
+                        <span dir="auto">{pt}</span>
+                      )}
                     </li>
                   ))}
                 </ul>

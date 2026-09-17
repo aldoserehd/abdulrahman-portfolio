@@ -22,7 +22,7 @@ const EMAIL = "abdulrahmanaldousari4@gmail.com";
 const LINKEDIN = "https://www.linkedin.com/in/abdulrahman-al-dousari-5a4837217";
 const GITHUB = "https://github.com/aldoserehd";
 
-export const links = { email: EMAIL, linkedin: LINKEDIN, github: GITHUB };
+export const links = { email: EMAIL, linkedin: LINKEDIN, github: GITHUB, tickholic: "https://www.instagram.com/tickholic/" };
 
 const img = (p: string) => `/images/${p}`;
 
