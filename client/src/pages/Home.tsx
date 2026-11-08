@@ -165,37 +165,6 @@ function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Phone fan */}
-      <div className="shell relative mt-16 sm:mt-20">
-        <div className="relative mx-auto h-[300px] max-w-[760px] overflow-hidden sm:h-[500px]" dir="ltr">
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 top-1/3 rounded-full bg-[radial-gradient(closest-side,rgba(29,185,84,0.14),transparent)] blur-2xl" />
-          {phones.map((p, i) => (
-            <motion.div
-              key={i}
-              className="absolute left-1/2 top-0 w-[38%] max-w-[250px]"
-              style={{ zIndex: p.z, x: "-50%" }}
-              initial={reduce ? false : { opacity: 0, y: 80, rotate: 0 }}
-              animate={{ opacity: 1, y: p.y, rotate: p.rot }}
-              transition={{ duration: 1.1, ease, delay: p.delay }}
-            >
-              <div style={{ transform: `translateX(${p.x})` }}>
-                {p.framed ? (
-                  <PhoneFrame src={p.src} />
-                ) : (
-                  <img
-                    src={p.src}
-                    alt=""
-                    className="w-full rounded-[1.6rem] border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] sm:rounded-[2rem]"
-                    loading="eager"
-                  />
-                )}
-              </div>
-            </motion.div>
-          ))}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-[#07080b] via-[#07080b]/80 to-transparent sm:h-44" />
-        </div>
-      </div>
-
       {/* Stats */}
       <div className="shell relative pb-6">
         <div className="grid grid-cols-2 border-y border-white/[0.06] md:grid-cols-4">
