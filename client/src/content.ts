@@ -46,7 +46,7 @@ export const content = {
         { v: "Bat + Sukkar", l: "what I’m building now" },
         { v: "Apr 2027", l: "graduating from Carleton" },
         { v: "AR / EN", l: "bilingual from day one" },
-        { v: "Ottawa ⇄ Kuwait", l: "where I work" },
+        { v: "Building from anywhere", l: "where I work" },
       ],
     },
     work: {
@@ -65,7 +65,7 @@ export const content = {
         desc: "Building an Arabic-first platform for law firms in the Gulf with lawyer Mouath Alturki. It brings case management, documents and legal AI into one workspace. I lead development and the multi-tenant architecture, with in-Kingdom hosting on HUMAIN.",
         role: "Co-founder · lead developer",
         tags: ["Legal AI", "Multi-tenant SaaS", "HUMAIN"],
-        link: {"href": "https://bat.sa", "label": "bat.sa"},
+
         accent: "#B0CDE3",
         visual: { kind: "wide", image: BAT_LOGO, fit: "contain" },
       },
@@ -133,7 +133,7 @@ export const content = {
         tags: ["React Native", "Gamification", "Multi-role auth", "RTL"],
         accent: "#E96840",
         icon: img("najem/icon.png"),
-        visual: { kind: "wide", image: img("mshro3e/og.webp"), fit: "cover" },
+        visual: { kind: "wide", image: img("najem/all-screens.webp"), fit: "cover" },
       },
       {
         id: "mshro3e",
@@ -169,7 +169,7 @@ export const content = {
         "I use Claude Code and Codex daily. They help me write and test code, but I'm responsible for the architecture, security and what gets released.",
       ],
       facts: [
-        { k: "Based in", v: "Ottawa, Canada · Kuwait" },
+        { k: "Based in", v: "Currently in Ottawa" },
         { k: "Studying", v: "B.Sc. Computer Science, Carleton" },
         { k: "Focus", v: "Cybersecurity specialization + minor" },
         { k: "Languages", v: "Arabic · English" },
@@ -299,7 +299,7 @@ export const content = {
         desc: "أبني مع المحامي معاذ التركي منصة عربية لمكاتب المحاماة السعودية، تجمع إدارة القضايا والمستندات وأدوات الذكاء الاصطناعي القانوني في مكان واحد. أقود التطوير وتصميم البنية متعددة المستأجرين، مع استضافة داخل المملكة على HUMAIN.",
         role: "شريك مؤسس · المطور الرئيسي",
         tags: ["Legal AI", "Multi-tenant SaaS", "HUMAIN"],
-        link: {"href": "https://bat.sa", "label": "bat.sa"},
+
         accent: "#B0CDE3",
         visual: { kind: "wide", image: BAT_LOGO, fit: "contain" },
       },
@@ -367,7 +367,7 @@ export const content = {
         tags: ["React Native", "Gamification", "Multi-role auth", "RTL"],
         accent: "#E96840",
         icon: img("najem/icon.png"),
-        visual: { kind: "wide", image: img("mshro3e/og.webp"), fit: "cover" },
+        visual: { kind: "wide", image: img("najem/all-screens.webp"), fit: "cover" },
       },
       {
         id: "mshro3e",
