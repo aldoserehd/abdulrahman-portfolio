@@ -121,7 +121,7 @@ function Hero() {
   const phones = [
     { src: "/images/athar/screen-prayer.webp", rot: -9, x: "-62%", y: 36, z: 1, delay: 0.35 },
     { src: "/images/wize/screen-overview.webp", rot: 0, x: "0%", y: 0, z: 3, delay: 0.2 },
-    { src: "/images/najem/kid-home.webp", rot: 9, x: "62%", y: 36, z: 2, delay: 0.45, framed: true },
+    { src: "/images/wize/screen-wize-ai.webp", rot: 9, x: "62%", y: 36, z: 2, delay: 0.45, framed: true },
   ];
 
   return (

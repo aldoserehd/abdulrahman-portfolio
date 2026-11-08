@@ -119,7 +119,7 @@ export const content = {
         tags: ["Next.js", "TypeScript", "Supabase", "Voice AI", "Multi-tenant SaaS"],
         link: { href: "https://yoursimplesolutions.ca", label: "yoursimplesolutions.ca" },
         accent: "#3B82F6",
-        visual: { kind: "wide", image: img("yss/portal-today.webp"), fit: "contain" },
+        visual: { kind: "wide", image: img("yss/mock-laptop.webp"), fit: "contain" },
       },
     ] as Project[],
     smallProjects: [
@@ -133,7 +133,7 @@ export const content = {
         tags: ["React Native", "Gamification", "Multi-role auth", "RTL"],
         accent: "#E96840",
         icon: img("najem/icon.png"),
-        visual: { kind: "phones", images: [img("najem/kid-home.webp"), img("najem/parent-home.webp"), img("najem/kid-store.webp")] },
+        visual: { kind: "wide", image: img("mshro3e/og.webp"), fit: "cover" },
       },
       {
         id: "mshro3e",
@@ -353,7 +353,7 @@ export const content = {
         tags: ["Next.js", "TypeScript", "Supabase", "Voice AI", "Multi-tenant SaaS"],
         link: { href: "https://yoursimplesolutions.ca", label: "yoursimplesolutions.ca" },
         accent: "#3B82F6",
-        visual: { kind: "wide", image: img("yss/portal-today.webp"), fit: "contain" },
+        visual: { kind: "wide", image: img("yss/mock-laptop.webp"), fit: "contain" },
       },
     ] as Project[],
     smallProjects: [
@@ -367,7 +367,7 @@ export const content = {
         tags: ["React Native", "Gamification", "Multi-role auth", "RTL"],
         accent: "#E96840",
         icon: img("najem/icon.png"),
-        visual: { kind: "phones", images: [img("najem/kid-home.webp"), img("najem/parent-home.webp"), img("najem/kid-store.webp")] },
+        visual: { kind: "wide", image: img("mshro3e/og.webp"), fit: "cover" },
       },
       {
         id: "mshro3e",
